@@ -1,34 +1,71 @@
-body {
-  font-family: Arial, sans-serif;
+/* Basic reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar {
-  background-color: #333;
-  overflow: hidden;
+body {
+  font-family: system-ui, sans-serif;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
 }
 
-.tablink {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 20px;
+/* Nav styling */
+.nav {
+  margin-bottom: 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  position: relative;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.nav__link {
+  padding: 10px 20px;
+  position: relative;
+  color: #333;
   text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 1;
 }
 
-.tablink:hover {
-  background-color: #575757;
+.nav__link:hover,
+.nav__link.active {
+  color: #04AA6D;
 }
 
-.tablink.active {
-  background-color: #04AA6D;
+/* Animated indicator */
+.nav__indicator {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  background: #04AA6D;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  left: 0;
+  width: 0;
+  z-index: 0;
 }
 
+/* Tab content */
 .tab-content {
   display: none;
+  text-align: center;
   padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 600px;
 }
 
 .tab-content.active {

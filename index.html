@@ -8,34 +8,62 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="#home" class="tablink active">Home</a>
-    <a href="#work" class="tablink">Work Samples</a>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li>
+        <a href="#home" class="nav__link active">Home</a>
+      </li>
+      <li>
+        <a href="#work" class="nav__link">Work Samples</a>
+      </li>
+      <span class="nav__indicator"></span>
+    </ul>
   </nav>
 
-  <div id="home" class="tab-content active">
-    <h1>Hello, World!</h1>
-    <p>Welcome to my portfolio site.</p>
-  </div>
+  <main>
+    <section id="home" class="tab-content active">
+      <h1>Hello, World!</h1>
+      <p>Welcome to my portfolio site.</p>
+    </section>
 
-  <div id="work" class="tab-content">
-    <h1>Work Samples</h1>
-    <p>Coming soon...</p>
-  </div>
+    <section id="work" class="tab-content">
+      <h1>Work Samples</h1>
+      <p>Coming soon...</p>
+    </section>
+  </main>
 
   <script>
-    const tabs = document.querySelectorAll('.tablink');
+    const links = document.querySelectorAll('.nav__link');
     const contents = document.querySelectorAll('.tab-content');
+    const indicator = document.querySelector('.nav__indicator');
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', e => {
+    function moveIndicator(activeLink) {
+      indicator.style.width = `${activeLink.offsetWidth}px`;
+      indicator.style.left = `${activeLink.offsetLeft}px`;
+    }
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
         e.preventDefault();
-        tabs.forEach(t => t.classList.remove('active'));
-        contents.forEach(c => c.classList.remove('active'));
 
-        tab.classList.add('active');
-        document.querySelector(tab.getAttribute('href')).classList.add('active');
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        moveIndicator(link);
+
+        contents.forEach(c => c.classList.remove('active'));
+        const target = document.querySelector(link.getAttribute('href'));
+        target.classList.add('active');
       });
+    });
+
+    window.addEventListener('load', () => {
+      const activeLink = document.querySelector('.nav__link.active');
+      moveIndicator(activeLink);
+    });
+
+    window.addEventListener('resize', () => {
+      const activeLink = document.querySelector('.nav__link.active');
+      moveIndicator(activeLink);
     });
   </script>
 
