@@ -1,0 +1,2 @@
+$ cd slaskin.github.io
+$ echo "Hello World" > index.html
