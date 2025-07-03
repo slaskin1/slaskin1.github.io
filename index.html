@@ -11,12 +11,8 @@
   <!-- Navigation -->
   <nav class="nav">
     <ul class="nav__list">
-      <li>
-        <a href="#home" class="nav__link active">Home</a>
-      </li>
-      <li>
-        <a href="#work" class="nav__link">Work Samples</a>
-      </li>
+      <li><a href="#home" class="nav__link active">Home</a></li>
+      <li><a href="#work" class="nav__link">Work Samples</a></li>
       <span class="nav__indicator"></span>
     </ul>
   </nav>
@@ -32,45 +28,42 @@
     <!-- Work Samples Tab -->
     <section id="work" class="tab-content">
       <h1>Work Samples</h1>
-      <p>Here are some highlights of my work.</p>
-
       <div class="carousel">
+        <button class="carousel__button left" aria-label="Previous Slide">&#8592;</button>
         <div class="carousel__track-container">
           <ul class="carousel__track">
-            <li class="carousel__slide">
+            <li class="carousel__slide current-slide">
               <div class="carousel__card">
                 <h2>Project Title 1</h2>
+                <p class="date"><em>FA2022</em></p>
                 <p>Brief description of what this project is about.</p>
-                <a class="carousel__button" href="#">Download and Read Here</a>
+                <a class="carousel__link" href="#">Download and Read Here</a>
               </div>
             </li>
             <li class="carousel__slide">
               <div class="carousel__card">
                 <h2>Project Title 2</h2>
+                <p class="date"><em>SP2023</em></p>
                 <p>A different work sample that demonstrates my skills.</p>
-                <a class="carousel__button" href="#">Download and Read Here</a>
+                <a class="carousel__link" href="#">Download and Read Here</a>
               </div>
             </li>
             <li class="carousel__slide">
               <div class="carousel__card">
                 <h2>Project Title 3</h2>
+                <p class="date"><em>FA2023</em></p>
                 <p>Another example of a project I’ve done.</p>
-                <a class="carousel__button" href="#">Download and Read Here</a>
+                <a class="carousel__link" href="#">Download and Read Here</a>
               </div>
             </li>
           </ul>
         </div>
-
-        <div class="carousel__nav">
-          <button class="carousel__indicator current-slide"></button>
-          <button class="carousel__indicator"></button>
-          <button class="carousel__indicator"></button>
-        </div>
+        <button class="carousel__button right" aria-label="Next Slide">&#8594;</button>
       </div>
     </section>
   </main>
 
-  <!-- Tab Switching & Nav Indicator Script -->
+  <!-- Navigation + Tab Toggle Script -->
   <script>
     const links = document.querySelectorAll('.nav__link');
     const contents = document.querySelectorAll('.tab-content');
@@ -84,7 +77,6 @@
     links.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
-
         links.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
         moveIndicator(link);
@@ -110,27 +102,30 @@
   <script>
     const track = document.querySelector('.carousel__track');
     const slides = Array.from(track.children);
-    const indicators = document.querySelectorAll('.carousel__indicator');
-
+    const nextBtn = document.querySelector('.carousel__button.right');
+    const prevBtn = document.querySelector('.carousel__button.left');
     let currentIndex = 0;
 
-    function moveToSlide(index) {
+    function updateSlidePosition() {
       const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(-${slideWidth * index}px)`;
-      indicators.forEach(dot => dot.classList.remove('current-slide'));
-      indicators[index].classList.add('current-slide');
-      currentIndex = index;
+      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
     }
 
-    indicators.forEach((indicator, index) => {
-      indicator.addEventListener('click', () => {
-        moveToSlide(index);
-      });
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateSlidePosition();
+      }
     });
 
-    window.addEventListener('resize', () => {
-      moveToSlide(currentIndex);
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlidePosition();
+      }
     });
+
+    window.addEventListener('resize', updateSlidePosition);
   </script>
 
 </body>
