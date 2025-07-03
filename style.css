@@ -64,11 +64,70 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   width: 100%;
-  max-width: 600px;
+  max-width: 1100px;
 }
 
 .tab-content.active {
   display: block;
+}
+
+/* Home Layout */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  align-items: start;
+  justify-content: center;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio-box,
+.skills-box,
+.involvement-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.bio-box {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.skills-box {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.involvement-box {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.skills-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-box li em {
+  display: block;
+  font-style: italic;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.skills-box li ul {
+  padding-left: 20px;
+  list-style: disc;
 }
 
 /* Carousel */
@@ -135,7 +194,6 @@ body {
   background-color: #038d5a;
 }
 
-/* Arrows */
 .carousel__button {
   background: none;
   border: none;
