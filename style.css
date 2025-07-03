@@ -126,7 +126,7 @@ body {
 /* Carousel */
 .carousel {
   position: relative;
-  max-width: 800px;
+  max-width: 700px; /* Fixed width to fit exactly 2 slides */
   margin: 2rem auto;
   overflow: hidden;
 }
@@ -145,7 +145,7 @@ body {
 }
 
 .carousel__slide {
-  min-width: 100%;
+  min-width: 50%; /* Exactly 2 slides visible */
   padding: 1rem;
   box-sizing: border-box;
 }
@@ -154,44 +154,23 @@ body {
   background: #ffffff;
   border: 2px solid #1e3040;
   border-radius: 10px;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
   text-align: center;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.carousel__card h2 {
-  margin-bottom: 0.5rem;
-}
-
-.carousel__card .date {
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.carousel__link {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 10px 16px;
-  background-color: #d97647;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-}
-
-.carousel__link:hover {
-  background-color: #c5673c;
-}
-
+/* Arrows */
 .carousel__button {
   background: none;
   border: none;
   font-size: 2rem;
   cursor: pointer;
   color: #d97647;
-  padding: 0 1rem;
+  padding: 0.5rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Soren Laskin Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -77,7 +77,7 @@
       <button class="carousel__button left">&#8592;</button>
       <div class="carousel__track-container">
         <ul class="carousel__track">
-          <li class="carousel__slide current-slide">
+          <li class="carousel__slide">
             <div class="carousel__card">
               <h2>Project Title 1</h2>
               <p class="date"><em>FA2022</em></p>
@@ -116,6 +116,7 @@
   </section>
 
   <script>
+    // Tab navigation
     const tabs = document.querySelectorAll('.nav__link');
     const contents = document.querySelectorAll('.tab-content');
 
@@ -129,29 +130,37 @@
       });
     });
 
-    // Carousel JS
+    // Carousel functionality
     const track = document.querySelector('.carousel__track');
     const slides = Array.from(track.children);
     const nextButton = document.querySelector('.carousel__button.right');
     const prevButton = document.querySelector('.carousel__button.left');
 
     let currentIndex = 0;
+    const slidesToShow = 2;
 
     function updateSlide(index) {
       const slideWidth = slides[0].getBoundingClientRect().width;
+      // Clamp index for looping around
+      if(index < 0) {
+        index = slides.length - slidesToShow;
+      } else if(index > slides.length - slidesToShow) {
+        index = 0;
+      }
       track.style.transform = `translateX(-${slideWidth * index}px)`;
       currentIndex = index;
     }
 
     nextButton.addEventListener('click', () => {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      updateSlide(nextIndex);
+      updateSlide(currentIndex + 1);
     });
 
     prevButton.addEventListener('click', () => {
-      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlide(prevIndex);
+      updateSlide(currentIndex - 1);
     });
+
+    // Initialize position
+    updateSlide(0);
   </script>
 </body>
 </html>
