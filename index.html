@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#home" class="tablink active">Home</a>
+    <a href="#work" class="tablink">Work Samples</a>
+  </nav>
+
+  <div id="home" class="tab-content active">
+    <h1>Hello, World!</h1>
+    <p>Welcome to my portfolio site.</p>
+  </div>
+
+  <div id="work" class="tab-content">
+    <h1>Work Samples</h1>
+    <p>Coming soon...</p>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tablink');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.querySelector(tab.getAttribute('href')).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
