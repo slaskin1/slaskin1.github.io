@@ -6,8 +6,9 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  background: #f9f9f9;
+  font-family: Tahoma, sans-serif;
+  background: #d6e3f1;
+  color: #1e3040;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +24,7 @@ body {
   display: flex;
   list-style: none;
   position: relative;
-  background: #fff;
+  background: #1e3040;
   padding: 10px 20px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
@@ -32,7 +33,7 @@ body {
 .nav__link {
   padding: 10px 20px;
   position: relative;
-  color: #333;
+  color: #d6e3f1;
   text-decoration: none;
   transition: color 0.3s ease;
   z-index: 1;
@@ -40,14 +41,14 @@ body {
 
 .nav__link:hover,
 .nav__link.active {
-  color: #04AA6D;
+  color: #d97647;
 }
 
 .nav__indicator {
   position: absolute;
   bottom: 0;
   height: 3px;
-  background: #04AA6D;
+  background: #d97647;
   transition: all 0.3s ease;
   border-radius: 2px;
   left: 0;
@@ -60,9 +61,7 @@ body {
   display: none;
   text-align: center;
   padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background: none;
   width: 100%;
   max-width: 1100px;
 }
@@ -71,7 +70,7 @@ body {
   display: block;
 }
 
-/* Home Layout */
+/* Layout */
 .home-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -80,7 +79,6 @@ body {
   margin-top: 20px;
 }
 
-.photo-placeholder,
 .bio-box,
 .skills-box,
 .involvement-box {
@@ -93,20 +91,19 @@ body {
 }
 
 .photo-placeholder {
-  height: auto;
+  padding: 0;
+  background: none;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #999;
-  font-style: italic;
-  font-size: 1.2rem;
 }
 
 .photo-placeholder img {
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 .skills-box ul {
@@ -129,17 +126,14 @@ body {
 /* Carousel */
 .carousel {
   position: relative;
-  max-width: 600px;
+  max-width: 800px;
   margin: 2rem auto;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .carousel__track-container {
   overflow: hidden;
-  flex: 1;
+  width: 100%;
 }
 
 .carousel__track {
@@ -157,7 +151,8 @@ body {
 }
 
 .carousel__card {
-  background: #fff;
+  background: #ffffff;
+  border: 2px solid #1e3040;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -179,7 +174,7 @@ body {
   display: inline-block;
   margin-top: 1rem;
   padding: 10px 16px;
-  background-color: #04AA6D;
+  background-color: #d97647;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -187,7 +182,7 @@ body {
 }
 
 .carousel__link:hover {
-  background-color: #038d5a;
+  background-color: #c5673c;
 }
 
 .carousel__button {
@@ -195,10 +190,22 @@ body {
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #04AA6D;
+  color: #d97647;
   padding: 0 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel__button.left {
+  left: 0;
+}
+
+.carousel__button.right {
+  right: 0;
 }
 
 .carousel__button:hover {
-  color: #038d5a;
+  color: #c5673c;
 }
