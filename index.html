@@ -3,182 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Soren Laskin Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="nav">
     <ul class="nav__list">
-      <li><a href="#home" class="nav__link active">Home</a></li>
-      <li><a href="#work" class="nav__link">Work Samples</a></li>
+      <li><a href="#" class="nav__link active" data-tab="home">Home</a></li>
+      <li><a href="#" class="nav__link" data-tab="work">Work Samples</a></li>
       <span class="nav__indicator"></span>
     </ul>
   </nav>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Home Tab -->
-    <section id="home" class="tab-content active">
-      <div class="home-grid">
-        <div class="photo-placeholder">
-          <img src="profile.jpg" alt="Soren Laskin" />
-        </div>
-
-        <div class="bio-box">
-          <p>My name is Soren Laskin and I'm a recent graduate of Pitzer College in Claremont, CA. I'm currently pursuing my Masters in Management Information Systems and am scheduled to complete my degree in December.</p>
-          <p>I have a wide variety of skills, both technical and soft, and am looking to utilize these skills to contribute to more good in the tech workforce. I believe nothing is siloed, and interdisciplinary learning is increasingly important in the age of AI and automation.</p>
-          <p>Under our competition-driven society, we have a tendency to innovate first and ask questions about long-term impacts after. The industrial revolution was huge for supply chain workflows and transportation, but it wasn't until years later it was discovered we tore a hole in our ozone layer. Similarly, AI is the next emerging technology, and the toothpaste is already out of the tube, so where do we go from here?</p>
-          <p>With my background in sociology and organizational studies, coupled with my more technical Masters, I want to explore options with companies about how to utilize AI in the best ways possible, while figuring out what next steps will be in AI innovation globally.</p>
-        </div>
-
-        <div class="skills-box">
-          <ul>
-            <li><em>Technical</em>
-              <ul>
-                <li>SQL</li>
-                <li>VS Code</li>
-                <li>GitHub</li>
-                <li>Excel</li>
-                <li>HTML</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>PowerBI</li>
-                <li>IBM SPSS</li>
-                <li>Slate</li>
-              </ul>
-            </li>
-            <li><em>Professional</em>
-              <ul>
-                <li>Organization</li>
-                <li>Team Building</li>
-                <li>Public Speaking</li>
-                <li>Leadership</li>
-                <li>Social Media</li>
-              </ul>
-            </li>
-            <li><em>Language</em>
-              <ul>
-                <li>English</li>
-                <li>Spanish (advanced)</li>
-                <li>Chinese (intermediate)</li>
-                <li>Hebrew</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="involvement-box">
-          <p>In college I was heavily involved on campus, authoring multiple pieces of legislation for Senate, serving on the Presidential Visionary Committee, founding an Affinity Group, and being the VP of multiple 5C organizations on campus.</p>
-          <p>I also worked in the Office of Admission for three years, first as a tour guide, and then promoted twice to a Tour Guide Manager and Admission Fellow junior and senior years.</p>
-          <p>I also enjoy volunteering, doing freelance pro-bono college counseling work for marginalized students as well as helping out at the Trevor Project. In my free time, I enjoy reading, going to concerts, walking my dog, traveling, and skiing.</p>
-        </div>
+  <section id="home" class="tab-content active">
+    <div class="home-grid">
+      <div class="photo-placeholder">
+        <img src="profile.jpg.jpg" alt="Soren Laskin" />
       </div>
-    </section>
 
-    <!-- Work Samples Tab -->
-    <section id="work" class="tab-content">
-      <h1>Work Samples</h1>
-      <div class="carousel">
-        <button class="carousel__button left" aria-label="Previous Slide">&#8592;</button>
-        <div class="carousel__track-container">
-          <ul class="carousel__track">
-            <li class="carousel__slide current-slide">
-              <div class="carousel__card">
-                <h2>Project Title 1</h2>
-                <p class="date"><em>FA2022</em></p>
-                <p>Brief description of what this project is about.</p>
-                <a class="carousel__link" href="#">Download and Read Here</a>
-              </div>
-            </li>
-            <li class="carousel__slide">
-              <div class="carousel__card">
-                <h2>Project Title 2</h2>
-                <p class="date"><em>SP2023</em></p>
-                <p>A different work sample that demonstrates my skills.</p>
-                <a class="carousel__link" href="#">Download and Read Here</a>
-              </div>
-            </li>
-            <li class="carousel__slide">
-              <div class="carousel__card">
-                <h2>Project Title 3</h2>
-                <p class="date"><em>FA2023</em></p>
-                <p>Another example of a project I’ve done.</p>
-                <a class="carousel__link" href="#">Download and Read Here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <button class="carousel__button right" aria-label="Next Slide">&#8594;</button>
+      <div class="bio-box">
+        <p>My name is Soren Laskin and I'm a recent graduate of Pitzer College in Claremont, CA. I'm currently pursuing my Masters in Management Information Systems and am scheduled to complete my degree in December.</p>
+        <p>I have a wide variety of skills, both technical and soft, and am looking to utilize these skills to contribute to more good in the tech workforce. I believe nothing is siloed, and interdisciplinary learning is increasingly important in the age of AI and automation.</p>
+        <p>Under our competition-driven society, we have a tendency to innovate first and ask questions about long-term impacts after. The industrial revolution was huge for supply chain workflows and transportation, but it wasn't until years later it was discovered we tore a hole in our ozone layer. Similarly, AI is the next emerging technology, and the toothpaste is already out of the tube, so where do we go from here? With my background in sociology and organizational studies, coupled with my more technical Masters, I want to explore options with companies about how to utilize AI in the best ways possible, while figuring out what next steps will be in AI innovation globally.</p>
       </div>
-    </section>
-  </main>
 
-  <!-- Navigation Script -->
+      <div class="skills-box">
+        <ul>
+          <li><em>Technical</em>
+            <ul>
+              <li>SQL</li>
+              <li>VS Code</li>
+              <li>GitHub</li>
+              <li>Excel</li>
+              <li>HTML</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>PowerBI</li>
+              <li>IBM SPSS</li>
+              <li>Slate</li>
+            </ul>
+          </li>
+          <li><em>Professional</em>
+            <ul>
+              <li>Organization</li>
+              <li>Team Building</li>
+              <li>Public Speaking</li>
+              <li>Leadership</li>
+              <li>Social Media</li>
+            </ul>
+          </li>
+          <li><em>Language</em>
+            <ul>
+              <li>English</li>
+              <li>Spanish (advanced)</li>
+              <li>Chinese (intermediate)</li>
+              <li>Hebrew</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="involvement-box">
+        <p>In college I was heavily involved on campus, authoring multiple pieces of legislation for Senate, serving on the Presidential Visionary Committee, founding an Affinity Group, and being the VP of multiple 5C organizations on campus.</p>
+        <p>I also worked in the Office of Admission for three years, first as a tour guide, and then promoted twice to a Tour Guide Manager and Admission Fellow junior and senior years.</p>
+        <p>I also enjoy volunteering, doing freelance pro-bono college counseling work for marginalized students as well as helping out at the Trevor Project. In my free time, I enjoy reading, going to concerts, walking my dog, traveling, and skiing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="tab-content">
+    <h1>Work Samples</h1>
+    <div class="carousel">
+      <button class="carousel__button left">&#8592;</button>
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          <li class="carousel__slide current-slide">
+            <div class="carousel__card">
+              <h2>Project Title 1</h2>
+              <p class="date"><em>FA2022</em></p>
+              <p>Brief description of what this project is about.</p>
+              <a class="carousel__link" href="https://drive.google.com/file/d/1VnzjyKKyooiQDyM_K2c2m3nDHz_j-RnF/view?usp=sharing" target="_blank">Download and Read Here</a>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <div class="carousel__card">
+              <h2>Project Title 2</h2>
+              <p class="date"><em>SP2023</em></p>
+              <p>A different work sample that demonstrates my skills.</p>
+              <a class="carousel__link" href="https://drive.google.com/file/d/1PXLPYJsUVf0iawLS4d_e_dGlJXhyTMou/view?usp=sharing" target="_blank">Download and Read Here</a>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <div class="carousel__card">
+              <h2>Project Title 3</h2>
+              <p class="date"><em>FA2023</em></p>
+              <p>Another example of a project I’ve done.</p>
+              <a class="carousel__link" href="https://drive.google.com/file/d/1evADbQ_RBWhx0H09ExldVVgJO3syvyle/view?usp=sharing" target="_blank">Download and Read Here</a>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <div class="carousel__card">
+              <h2>Project Title 4</h2>
+              <p class="date"><em>SP2024</em></p>
+              <p>A recent project I'm finalizing.</p>
+              <a class="carousel__link" href="https://www.google.com" target="_blank">Download and Read Here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="carousel__button right">&#8594;</button>
+    </div>
+  </section>
+
   <script>
-    const links = document.querySelectorAll('.nav__link');
+    const tabs = document.querySelectorAll('.nav__link');
     const contents = document.querySelectorAll('.tab-content');
     const indicator = document.querySelector('.nav__indicator');
 
-    function moveIndicator(activeLink) {
-      indicator.style.width = `${activeLink.offsetWidth}px`;
-      indicator.style.left = `${activeLink.offsetLeft}px`;
-    }
-
-    links.forEach(link => {
-      link.addEventListener('click', e => {
+    tabs.forEach(tab => {
+      tab.addEventListener('click', e => {
         e.preventDefault();
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-        moveIndicator(link);
-
+        tabs.forEach(t => t.classList.remove('active'));
         contents.forEach(c => c.classList.remove('active'));
-        const target = document.querySelector(link.getAttribute('href'));
-        target.classList.add('active');
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
       });
     });
 
-    window.addEventListener('load', () => {
-      const activeLink = document.querySelector('.nav__link.active');
-      moveIndicator(activeLink);
-    });
-
-    window.addEventListener('resize', () => {
-      const activeLink = document.querySelector('.nav__link.active');
-      moveIndicator(activeLink);
-    });
-  </script>
-
-  <!-- Carousel Script -->
-  <script>
+    // Carousel JS
     const track = document.querySelector('.carousel__track');
     const slides = Array.from(track.children);
-    const nextBtn = document.querySelector('.carousel__button.right');
-    const prevBtn = document.querySelector('.carousel__button.left');
+    const nextButton = document.querySelector('.carousel__button.right');
+    const prevButton = document.querySelector('.carousel__button.left');
+
     let currentIndex = 0;
 
-    function updateSlidePosition() {
+    function updateSlide(index) {
       const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
+      currentIndex = index;
     }
 
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < slides.length - 1) {
-        currentIndex++;
-        updateSlidePosition();
-      }
+    nextButton.addEventListener('click', () => {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      updateSlide(nextIndex);
     });
 
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateSlidePosition();
-      }
+    prevButton.addEventListener('click', () => {
+      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlide(prevIndex);
     });
-
-    window.addEventListener('resize', updateSlidePosition);
   </script>
-
 </body>
 </html>

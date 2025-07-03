@@ -93,13 +93,20 @@ body {
 }
 
 .photo-placeholder {
-  height: 250px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #999;
   font-style: italic;
   font-size: 1.2rem;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .skills-box ul {
