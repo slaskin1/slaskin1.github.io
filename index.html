@@ -74,7 +74,6 @@
 
   <section id="work" class="tab-content">
     <div class="carousel">
-      <button class="carousel__button left">&#8592;</button>
       <div class="carousel__track-container">
         <ul class="carousel__track">
           <li class="carousel__slide">
@@ -111,12 +110,14 @@
           </li>
         </ul>
       </div>
-      <button class="carousel__button right">&#8594;</button>
+      <div class="carousel__arrow-container">
+        <button class="carousel__button left">&#8592;</button>
+        <button class="carousel__button right">&#8594;</button>
+      </div>
     </div>
   </section>
 
   <script>
-    // Tab navigation
     const tabs = document.querySelectorAll('.nav__link');
     const contents = document.querySelectorAll('.tab-content');
 
@@ -130,7 +131,6 @@
       });
     });
 
-    // Carousel functionality
     const track = document.querySelector('.carousel__track');
     const slides = Array.from(track.children);
     const nextButton = document.querySelector('.carousel__button.right');
@@ -141,7 +141,6 @@
 
     function updateSlide(index) {
       const slideWidth = slides[0].getBoundingClientRect().width;
-      // Clamp index for looping around
       if(index < 0) {
         index = slides.length - slidesToShow;
       } else if(index > slides.length - slidesToShow) {
@@ -159,7 +158,6 @@
       updateSlide(currentIndex - 1);
     });
 
-    // Initialize position
     updateSlide(0);
   </script>
 </body>
