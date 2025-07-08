@@ -17,66 +17,66 @@
   </nav>
 
   <section id="home" class="tab-content active">
-    <div class="home-container">
-      <div class="left-column">
-        <div class="bio-box blue-box">
-          <p>My name is Soren Laskin and I'm a recent graduate of Pitzer College in Claremont, CA. I'm currently pursuing my Masters in Management Information Systems and am scheduled to complete my degree in December.</p>
-          <p>I have a wide variety of skills, both technical and soft, and am looking to utilize these skills to contribute to more good in the tech workforce. I believe nothing is siloed, and interdisciplinary learning is increasingly important in the age of AI and automation.</p>
-          <p>Under our competition-driven society, we have a tendency to innovate first and ask questions about long-term impacts after. The industrial revolution was huge for supply chain workflows and transportation, but it wasn't until years later it was discovered we tore a hole in our ozone layer. Similarly, AI is the next emerging technology, and the toothpaste is already out of the tube, so where do we go from here? With my background in sociology and organizational studies, coupled with my more technical Masters, I want to explore options with companies about how to utilize AI in the best ways possible, while figuring out what next steps will be in AI innovation globally.</p>
-        </div>
-        <div class="involvement-box blue-box">
-          <p>In college I was heavily involved on campus, authoring multiple pieces of legislation for Senate, serving on the Presidential Visionary Committee, founding an Affinity Group, and being the VP of multiple 5C organizations on campus.</p>
-          <p>I also worked in the Office of Admission for three years, first as a tour guide, and then promoted twice to a Tour Guide Manager and Admission Fellow junior and senior years.</p>
-          <p>I also enjoy volunteering, doing freelance pro-bono college counseling work for marginalized students as well as helping out at the Trevor Project. In my free time, I enjoy reading, going to concerts, walking my dog, traveling, and skiing.</p>
-        </div>
+    <div class="home-grid">
+      <div class="photo-placeholder">
+        <img src="profile.jpg.jpg" alt="Soren Laskin" />
       </div>
-      <div class="right-column">
-        <div class="skills-box blue-box">
-          <ul>
-            <li><em>Technical</em>
-              <ul>
-                <li>SQL</li>
-                <li>VS Code</li>
-                <li>GitHub</li>
-                <li>Excel</li>
-                <li>HTML</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>PowerBI</li>
-                <li>IBM SPSS</li>
-                <li>Slate</li>
-              </ul>
-            </li>
-            <li><em>Professional</em>
-              <ul>
-                <li>Organization</li>
-                <li>Team Building</li>
-                <li>Public Speaking</li>
-                <li>Leadership</li>
-                <li>Social Media</li>
-              </ul>
-            </li>
-            <li><em>Language</em>
-              <ul>
-                <li>English</li>
-                <li>Spanish (advanced)</li>
-                <li>Chinese (intermediate)</li>
-                <li>Hebrew</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+
+      <div class="bio-box">
+        <p>My name is Soren Laskin and I'm a recent graduate of Pitzer College in Claremont, CA. I'm currently pursuing my Masters in Management Information Systems and am scheduled to complete my degree in December.</p>
+        <p>I have a wide variety of skills, both technical and soft, and am looking to utilize these skills to contribute to more good in the tech workforce. I believe nothing is siloed, and interdisciplinary learning is increasingly important in the age of AI and automation.</p>
+        <p>Under our competition-driven society, we have a tendency to innovate first and ask questions about long-term impacts after. The industrial revolution was huge for supply chain workflows and transportation, but it wasn't until years later it was discovered we tore a hole in our ozone layer. Similarly, AI is the next emerging technology, and the toothpaste is already out of the tube, so where do we go from here? With my background in sociology and organizational studies, coupled with my more technical Masters, I want to explore options with companies about how to utilize AI in the best ways possible, while figuring out what next steps will be in AI innovation globally.</p>
+      </div>
+
+      <div class="skills-box">
+        <ul>
+          <li><em>Technical</em>
+            <ul>
+              <li>SQL</li>
+              <li>VS Code</li>
+              <li>GitHub</li>
+              <li>Excel</li>
+              <li>HTML</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>PowerBI</li>
+              <li>IBM SPSS</li>
+              <li>Slate</li>
+            </ul>
+          </li>
+          <li><em>Professional</em>
+            <ul>
+              <li>Organization</li>
+              <li>Team Building</li>
+              <li>Public Speaking</li>
+              <li>Leadership</li>
+              <li>Social Media</li>
+            </ul>
+          </li>
+          <li><em>Language</em>
+            <ul>
+              <li>English</li>
+              <li>Spanish (advanced)</li>
+              <li>Chinese (intermediate)</li>
+              <li>Hebrew</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="involvement-box">
+        <p>In college I was heavily involved on campus, authoring multiple pieces of legislation for Senate, serving on the Presidential Visionary Committee, founding an Affinity Group, and being the VP of multiple 5C organizations on campus.</p>
+        <p>I also worked in the Office of Admission for three years, first as a tour guide, and then promoted twice to a Tour Guide Manager and Admission Fellow junior and senior years.</p>
+        <p>I also enjoy volunteering, doing freelance pro-bono college counseling work for marginalized students as well as helping out at the Trevor Project. In my free time, I enjoy reading, going to concerts, walking my dog, traveling, and skiing.</p>
       </div>
     </div>
   </section>
 
   <section id="work" class="tab-content">
-    <h1>Work Samples</h1>
     <div class="carousel">
-      <button class="carousel__button left">&#8592;</button>
       <div class="carousel__track-container">
         <ul class="carousel__track">
-          <li class="carousel__slide current-slide">
+          <li class="carousel__slide">
             <div class="carousel__card">
               <h2>Project Title 1</h2>
               <p class="date"><em>FA2022</em></p>
@@ -110,14 +110,16 @@
           </li>
         </ul>
       </div>
-      <button class="carousel__button right">&#8594;</button>
+      <div class="carousel__arrow-container">
+        <button class="carousel__button left">&#8592;</button>
+        <button class="carousel__button right">&#8594;</button>
+      </div>
     </div>
   </section>
 
   <script>
     const tabs = document.querySelectorAll('.nav__link');
     const contents = document.querySelectorAll('.tab-content');
-    const indicator = document.querySelector('.nav__indicator');
 
     tabs.forEach(tab => {
       tab.addEventListener('click', e => {
@@ -129,29 +131,34 @@
       });
     });
 
-    // Carousel JS
     const track = document.querySelector('.carousel__track');
     const slides = Array.from(track.children);
     const nextButton = document.querySelector('.carousel__button.right');
     const prevButton = document.querySelector('.carousel__button.left');
 
     let currentIndex = 0;
+    const slidesToShow = 2;
 
     function updateSlide(index) {
       const slideWidth = slides[0].getBoundingClientRect().width;
+      if(index < 0) {
+        index = slides.length - slidesToShow;
+      } else if(index > slides.length - slidesToShow) {
+        index = 0;
+      }
       track.style.transform = `translateX(-${slideWidth * index}px)`;
       currentIndex = index;
     }
 
     nextButton.addEventListener('click', () => {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      updateSlide(nextIndex);
+      updateSlide(currentIndex + 1);
     });
 
     prevButton.addEventListener('click', () => {
-      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlide(prevIndex);
+      updateSlide(currentIndex - 1);
     });
+
+    updateSlide(0);
   </script>
 </body>
 </html>
