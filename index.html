@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Soren Laskin Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -22,52 +22,60 @@
         <img src="profile.jpg.jpg" alt="Soren Laskin" />
       </div>
 
+    <div class="text-box-container">
+      <div class="text-box-header">Header1</div>
       <div class="bio-box">
-        <p>My name is Soren Laskin and I'm a recent graduate of Pitzer College in Claremont, CA. I'm currently pursuing my Masters in Management Information Systems and am scheduled to complete my degree in December.</p>
-        <p>I have a wide variety of skills, both technical and soft, and am looking to utilize these skills to contribute to more good in the tech workforce. I believe nothing is siloed, and interdisciplinary learning is increasingly important in the age of AI and automation.</p>
-        <p>Under our competition-driven society, we have a tendency to innovate first and ask questions about long-term impacts after. The industrial revolution was huge for supply chain workflows and transportation, but it wasn't until years later it was discovered we tore a hole in our ozone layer. Similarly, AI is the next emerging technology, and the toothpaste is already out of the tube, so where do we go from here? With my background in sociology and organizational studies, coupled with my more technical Masters, I want to explore options with companies about how to utilize AI in the best ways possible, while figuring out what next steps will be in AI innovation globally.</p>
+        <p>My name is Soren Laskin and I'm a recent graduate of Pitzer College in Claremont, CA...</p>
+        <p>I have a wide variety of skills, both technical and soft...</p>
+        <p>With my background in sociology and organizational studies...</p>
+      </div>
+    </div>
+
+      <div class="skills-container">
+        <div class="skills-label">Skills & Qualities</div>
+        <div class="skills-box">
+          <ul>
+            <li><em>Technical</em>
+              <ul>
+                <li>SQL</li>
+                <li>VS Code</li>
+                <li>GitHub</li>
+                <li>Excel</li>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>PowerBI</li>
+                <li>IBM SPSS</li>
+                <li>Slate</li>
+              </ul>
+            </li>
+            <li><em>Professional</em>
+              <ul>
+                <li>Organization</li>
+                <li>Team Building</li>
+                <li>Public Speaking</li>
+                <li>Leadership</li>
+                <li>Social Media</li>
+              </ul>
+            </li>
+            <li><em>Language</em>
+              <ul>
+                <li>English</li>
+                <li>Spanish (advanced)</li>
+                <li>Chinese (intermediate)</li>
+                <li>Hebrew</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="skills-box">
-        <ul>
-          <li><em>Technical</em>
-            <ul>
-              <li>SQL</li>
-              <li>VS Code</li>
-              <li>GitHub</li>
-              <li>Excel</li>
-              <li>HTML</li>
-              <li>JavaScript</li>
-              <li>Python</li>
-              <li>PowerBI</li>
-              <li>IBM SPSS</li>
-              <li>Slate</li>
-            </ul>
-          </li>
-          <li><em>Professional</em>
-            <ul>
-              <li>Organization</li>
-              <li>Team Building</li>
-              <li>Public Speaking</li>
-              <li>Leadership</li>
-              <li>Social Media</li>
-            </ul>
-          </li>
-          <li><em>Language</em>
-            <ul>
-              <li>English</li>
-              <li>Spanish (advanced)</li>
-              <li>Chinese (intermediate)</li>
-              <li>Hebrew</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
+    <div class="text-box-container">
+      <div class="text-box-header">Header2</div>
       <div class="involvement-box">
-        <p>In college I was heavily involved on campus, authoring multiple pieces of legislation for Senate, serving on the Presidential Visionary Committee, founding an Affinity Group, and being the VP of multiple 5C organizations on campus.</p>
-        <p>I also worked in the Office of Admission for three years, first as a tour guide, and then promoted twice to a Tour Guide Manager and Admission Fellow junior and senior years.</p>
-        <p>I also enjoy volunteering, doing freelance pro-bono college counseling work for marginalized students as well as helping out at the Trevor Project. In my free time, I enjoy reading, going to concerts, walking my dog, traveling, and skiing.</p>
+        <p>In college I was heavily involved on campus...</p>
+        <p>I also worked in the Office of Admission for three years...</p>
+        <p>I also enjoy volunteering... and skiing.</p>
       </div>
     </div>
   </section>
@@ -131,34 +139,28 @@
       });
     });
 
+    // Carousel logic
     const track = document.querySelector('.carousel__track');
     const slides = Array.from(track.children);
     const nextButton = document.querySelector('.carousel__button.right');
     const prevButton = document.querySelector('.carousel__button.left');
 
     let currentIndex = 0;
-    const slidesToShow = 2;
 
-    function updateSlide(index) {
+    function updateCarousel(index) {
       const slideWidth = slides[0].getBoundingClientRect().width;
-      if(index < 0) {
-        index = slides.length - slidesToShow;
-      } else if(index > slides.length - slidesToShow) {
-        index = 0;
-      }
       track.style.transform = `translateX(-${slideWidth * index}px)`;
-      currentIndex = index;
     }
 
     nextButton.addEventListener('click', () => {
-      updateSlide(currentIndex + 1);
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel(currentIndex);
     });
 
     prevButton.addEventListener('click', () => {
-      updateSlide(currentIndex - 1);
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel(currentIndex);
     });
-
-    updateSlide(0);
   </script>
 </body>
 </html>
