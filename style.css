@@ -215,3 +215,40 @@ body {
 .carousel__link:hover {
   background-color: #c5673c;
 }
+
+.header-icons {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.icon-button {
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-button:hover {
+  background-color: #d97647;
+  transform: scale(1.1);
+}
+
+.icon-button:hover img {
+  filter: brightness(0) invert(1);
+}
