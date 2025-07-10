@@ -252,3 +252,8 @@ body {
 .icon-button:hover img {
   filter: brightness(0) invert(1);
 }
+
+.bio-box p,
+.involvement-box p {
+  margin-bottom: 1rem; /* Adjust this value to control spacing */
+}
