@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Soren's Web Site'</title>
+  <title>Soren's Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,68 +20,97 @@
     <a href="https://www.linkedin.com/in/slaskin" target="_blank" class="icon-button">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
     </a>
-    <a href="https://drive.google.com/file/d/15g8KGGy_0NxYGd5KN98drL_qn6zMo8Pj/view?usp=sharing" target="_blank" class="icon-button">
+    <a href="https://drive.google.com/file/d/15g8KGGy_0NxYGd5KN98drL_qn6zMo8Pj/view?usp=sharing" target="_blank" class="icon-button" aria-label="Resume">
       📄
     </a>
   </div>
 
+  <!-- ABOUT ME -->
   <section id="home" class="tab-content active">
+
+    <!-- top announcement card (was missing a closing tag in your file) -->
+    <div class="disclaimer-box">
+      <p>
+        This interface is still evolving, but I wanted to create a space to share my work samples and
+        highlight my experiences beyond what is captured on a résumé.
+      </p>
+    </div>
+
     <div class="home-grid">
+      <!-- Left column: photo -->
       <div class="photo-placeholder">
         <img src="profile.jpeg" alt="Soren Laskin" />
       </div>
-      
-      <div class="disclaimer-box">
-        <p>This interface is still evolving, but I wanted to create a space to share my work samples and highlight my experiences beyond what is captured on a résumé.</p>
-      <div class="bio-box">
-        <p>With a foundation in liberal arts and humanities complemented by a technical Masters degree, I bring a broad and distinctive skill set to any team. My academic and professional interests lie at the intersection of artificial intelligence, data analysis, and social impact. I have studied AI from both a technical and humanistic perspective, exploring its implications for businesses as well as its broader sociopolitical effects.</p>
-        <p></p>
-      </div>
 
-      <div class="skills-box">
-        <ul>
-          <li><em>Technical</em>
-            <ul>
-              <li>SQL</li>
-              <li>VS Code</li>
-              <li>GitHub</li>
-              <li>Excel</li>
-              <li>HTML</li>
-              <li>JavaScript</li>
-              <li>Python</li>
-              <li>PowerBI</li>
-              <li>IBM SPSS</li>
-              <li>Slate</li>
-            </ul>
-          </li>
-          <li><em>Professional</em>
-            <ul>
-              <li>Organization</li>
-              <li>Team Building</li>
-              <li>Public Speaking</li>
-              <li>Leadership</li>
-              <li>Social Media</li>
-            </ul>
-          </li>
-          <li><em>Language</em>
-            <ul>
-              <li>English</li>
-              <li>Spanish (advanced)</li>
-              <li>Chinese (intermediate)</li>
-              <li>Hebrew</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <!-- Right column: stacked cards -->
+      <div class="right-column">
+        <div class="bio-box">
+          <p>
+            With a foundation in liberal arts and humanities complemented by a technical Masters degree,
+            I bring a broad and distinctive skill set to any team. My academic and professional interests
+            lie at the intersection of artificial intelligence, data analysis, and social impact. I have studied
+            AI from both a technical and humanistic perspective, exploring its implications for businesses as well
+            as its broader sociopolitical effects.
+          </p>
+        </div>
 
-      <div class="involvement-box">
-        <p>In college I was heavily involved on campus, authoring multiple pieces of legislation for Senate, serving on the Presidential Visionary Committee, founding an Affinity Group, and being the VP of multiple 5C organizations on campus.</p>
-        <p>I also worked in the Office of Admission for three years, first as a tour guide, and then promoted twice to a Tour Guide Manager and Admission Fellow junior and senior years.</p>
-        <p>I also enjoy volunteering, doing freelance pro-bono college counseling work for marginalized students as well as helping out at the Trevor Project. In my free time, I enjoy reading, going to concerts, walking my dogs, traveling, and skiing.</p>
+        <div class="skills-box">
+          <ul>
+            <li><em>Technical</em>
+              <ul>
+                <li>SQL</li>
+                <li>VS Code</li>
+                <li>GitHub</li>
+                <li>Excel</li>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>PowerBI</li>
+                <li>IBM SPSS</li>
+                <li>Slate</li>
+              </ul>
+            </li>
+            <li><em>Professional</em>
+              <ul>
+                <li>Organization</li>
+                <li>Team Building</li>
+                <li>Public Speaking</li>
+                <li>Leadership</li>
+                <li>Social Media</li>
+              </ul>
+            </li>
+            <li><em>Language</em>
+              <ul>
+                <li>English</li>
+                <li>Spanish (advanced)</li>
+                <li>Chinese (intermediate)</li>
+                <li>Hebrew</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="involvement-box">
+          <p>
+            In college I was heavily involved on campus, authoring multiple pieces of legislation for Senate,
+            serving on the Presidential Visionary Committee, founding an Affinity Group, and being the VP of
+            multiple 5C organizations on campus.
+          </p>
+          <p>
+            I also worked in the Office of Admission for three years, first as a tour guide, and then promoted
+            twice to a Tour Guide Manager and Admission Fellow junior and senior years.
+          </p>
+          <p>
+            I also enjoy volunteering, doing freelance pro-bono college counseling work for marginalized students
+            as well as helping out at the Trevor Project. In my free time, I enjoy reading, going to concerts,
+            walking my dogs, traveling, and skiing.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- WORK SAMPLES -->
   <section id="work" class="tab-content">
     <div class="carousel">
       <div class="carousel__track-container">
@@ -90,18 +119,26 @@
             <div class="carousel__card">
               <h2>AI For Education Paper</h2>
               <p class="date"><em>SP2025</em></p>
-              <p>A collaborative paper envisioning AI integration in K-12 classrooms. Topics covered include ethical considerations, school variability, and stakeholder engagement to name a few.</p>
+              <p>
+                A collaborative paper envisioning AI integration in K-12 classrooms. Topics covered include
+                ethical considerations, school variability, and stakeholder engagement to name a few.
+              </p>
               <a class="carousel__link" href="https://drive.google.com/file/d/1VnzjyKKyooiQDyM_K2c2m3nDHz_j-RnF/view?usp=sharing" target="_blank">Download and Read Here</a>
             </div>
           </li>
+
           <li class="carousel__slide">
             <div class="carousel__card">
               <h2>Comparative Politics Paper</h2>
               <p class="date"><em>FA2022</em></p>
-              <p>In this paper I talk about the development of the Chinese state, citing individual economic development of towns around niche products with a connected road and transport system.</p>
+              <p>
+                In this paper I talk about the development of the Chinese state, citing individual economic
+                development of towns around niche products with a connected road and transport system.
+              </p>
               <a class="carousel__link" href="https://drive.google.com/file/d/1PXLPYJsUVf0iawLS4d_e_dGlJXhyTMou/view?usp=sharing" target="_blank">Download and Read Here</a>
             </div>
           </li>
+
           <li class="carousel__slide">
             <div class="carousel__card">
               <h2>Sociology of Violence Paper</h2>
@@ -110,6 +147,7 @@
               <a class="carousel__link" href="https://drive.google.com/file/d/1evADbQ_RBWhx0H09ExldVVgJO3syvyle/view?usp=sharing" target="_blank">Link to Read</a>
             </div>
           </li>
+
           <li class="carousel__slide">
             <div class="carousel__card">
               <h2>Senate Legislation</h2>
@@ -120,14 +158,16 @@
           </li>
         </ul>
       </div>
+
       <div class="carousel__arrow-container">
-        <button class="carousel__button left">&#8592;</button>
-        <button class="carousel__button right">&#8594;</button>
+        <button class="carousel__button left" aria-label="Previous">&#8592;</button>
+        <button class="carousel__button right" aria-label="Next">&#8594;</button>
       </div>
     </div>
   </section>
 
   <script>
+    // Tabs
     const tabs = document.querySelectorAll('.nav__link');
     const contents = document.querySelectorAll('.tab-content');
 
@@ -141,6 +181,7 @@
       });
     });
 
+    // Carousel
     const track = document.querySelector('.carousel__track');
     const slides = Array.from(track.children);
     const nextButton = document.querySelector('.carousel__button.right');
@@ -151,23 +192,17 @@
 
     function updateSlide(index) {
       const slideWidth = slides[0].getBoundingClientRect().width;
-      if(index < 0) {
+      if (index < 0) {
         index = slides.length - slidesToShow;
-      } else if(index > slides.length - slidesToShow) {
+      } else if (index > slides.length - slidesToShow) {
         index = 0;
       }
       track.style.transform = `translateX(-${slideWidth * index}px)`;
       currentIndex = index;
     }
 
-    nextButton.addEventListener('click', () => {
-      updateSlide(currentIndex + 1);
-    });
-
-    prevButton.addEventListener('click', () => {
-      updateSlide(currentIndex - 1);
-    });
-
+    nextButton.addEventListener('click', () => updateSlide(currentIndex + 1));
+    prevButton.addEventListener('click', () => updateSlide(currentIndex - 1));
     updateSlide(0);
   </script>
 </body>

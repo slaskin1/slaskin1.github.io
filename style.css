@@ -16,9 +16,7 @@ body {
 }
 
 /* Nav bar */
-.nav {
-  margin-bottom: 40px;
-}
+.nav { margin-bottom: 40px; }
 
 .nav__list {
   display: flex;
@@ -27,7 +25,7 @@ body {
   background: #1e3040;
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
 .nav__link {
@@ -42,9 +40,7 @@ body {
 }
 
 .nav__link:hover,
-.nav__link.active {
-  color: #d97647;
-}
+.nav__link.active { color: #d97647; }
 
 .nav__indicator {
   position: absolute;
@@ -67,18 +63,34 @@ body {
   width: 100%;
   max-width: 1100px;
 }
+.tab-content.active { display: block; }
 
-.tab-content.active {
-  display: block;
+/* -------- About Me layout -------- */
+
+/* top announcement card */
+.disclaimer-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-/* Layout */
+/* grid with photo + right column */
 .home-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
   justify-content: center;
+  align-items: start; /* keep cards aligned to top */
   margin-top: 20px;
+}
+
+/* stack cards on right side */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .bio-box,
@@ -99,7 +111,7 @@ body {
   text-align: left;
   height: auto;
   max-width: 350px;
-  margin: 0 auto;
+  margin: 0; /* right column now manages spacing */
 }
 
 .photo-placeholder {
@@ -118,10 +130,7 @@ body {
   box-shadow: none;
 }
 
-.skills-box ul {
-  list-style: none;
-  padding-left: 0;
-}
+.skills-box ul { list-style: none; padding-left: 0; }
 
 .skills-box li em {
   display: block;
@@ -135,7 +144,11 @@ body {
   list-style: disc;
 }
 
-/* Carousel */
+.bio-box p,
+.involvement-box p { margin-bottom: 1rem; }
+
+/* -------- Work Samples carousel -------- */
+
 .carousel {
   position: relative;
   max-width: 700px;
@@ -143,10 +156,7 @@ body {
   overflow: hidden;
 }
 
-.carousel__track-container {
-  overflow: hidden;
-  width: 100%;
-}
+.carousel__track-container { overflow: hidden; width: 100%; }
 
 .carousel__track {
   display: flex;
@@ -191,12 +201,9 @@ body {
   color: #d97647;
   padding: 0.5rem;
 }
+.carousel__button:hover { color: #c5673c; }
 
-.carousel__button:hover {
-  color: #c5673c;
-}
-
-/* Download Button Styling */
+/* Download Button */
 .carousel__link {
   display: inline-block;
   margin-top: 1rem;
@@ -211,11 +218,9 @@ body {
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+.carousel__link:hover { background-color: #c5673c; }
 
-.carousel__link:hover {
-  background-color: #c5673c;
-}
-
+/* Header icons */
 .header-icons {
   position: absolute;
   top: 20px;
@@ -239,21 +244,7 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.icon-button img {
-  width: 24px;
-  height: 24px;
-}
+.icon-button img { width: 24px; height: 24px; }
 
-.icon-button:hover {
-  background-color: #d97647;
-  transform: scale(1.1);
-}
-
-.icon-button:hover img {
-  filter: brightness(0) invert(1);
-}
-
-.bio-box p,
-.involvement-box p {
-  margin-bottom: 1rem; /* Adjust this value to control spacing */
-}
+.icon-button:hover { background-color: #d97647; transform: scale(1.1); }
+.icon-button:hover img { filter: brightness(0) invert(1); }
